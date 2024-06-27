@@ -15,13 +15,13 @@ import {TasksComponent} from "./tasks/tasks.component";
 export class AppComponent {
   users = DUMMY_USERS
   title = 'learn-angular';
-  userId = "u1"
+  selectedUserId?: string
 
   get selectedUser() {
-    return this.users.find(u => u.id === this.userId);
+    return this.users.find(u => u.id === this.selectedUserId);
   }
 
   onSelectUser(userId: string) {
-    this.userId = userId;
+    this.selectedUserId = userId;
   }
 }
