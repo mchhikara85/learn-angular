@@ -15,6 +15,7 @@ export class UserComponent {
   selectedUser = output<string>();*/
 
   @Input({required: true}) user!: User;
+  @Input({required: true}) selected!: boolean;
 
   @Output() selectedUser = new EventEmitter<string>();
 
